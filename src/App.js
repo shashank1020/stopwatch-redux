@@ -24,7 +24,7 @@ function App() {
             <div className="inner">{isStart && <LapButton/>}</div>
             <div className='inner'>{!isStart && time !== 0 && <Resume/>}</div>
             <div className='inner'>{!isStart && time > 0 && <Reset/>}</div>
-            {lap.length != 0 && <Lap/>}
+            {lap.length !== 0 && <Lap/>}
         </div>
     );
 }
