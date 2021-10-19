@@ -8,7 +8,7 @@
 body {
   font-family: "Quicksand";
   box-sizing: border-box;
-  background-color: #26292a;
-  color: whitesmoke;
+  background-color: inherit;
+  color: inherit;
 }
 

@@ -3,8 +3,6 @@
     padding: 30px;
     text-align: center;
     font-size: 2rem;
-    height: 100vh;
-    width: 100vh;
 }
 .App button {
     width: 6rem;
@@ -140,7 +138,7 @@
     max-width: 43rem;
     width: 50%;
     margin: 1rem auto;
-    color: #d2d0d0;
+    color: inherit;
     vertical-align: top;
     border-color: #dee2e6;
 }
