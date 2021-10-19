@@ -3,6 +3,7 @@
     padding: 30px;
     text-align: center;
     font-size: 2rem;
+    position: relative;
 }
 .App button {
     width: 6rem;
@@ -121,11 +122,6 @@
     border-color: #b02a37;
 }
 
-
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-    --bs-table-accent-bg: var(--bs-table-striped-bg);
-    color: var(--bs-table-striped-color);
-}
 .table {
     --bs-table-bg: transparent;
     --bs-table-accent-bg: transparent;
@@ -157,28 +153,40 @@
 .table > :not(:first-child) {
     border-top: 2px solid currentColor;
 }
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-    --bs-table-accent-bg: var(--bs-table-striped-bg);
-    color: var(--bs-table-striped-color);
-}
-
-.table-dark {
-    --bs-table-bg: #212529;
-    --bs-table-striped-bg: #2c3034;
-    --bs-table-striped-color: #fff;
-    --bs-table-active-bg: #373b3e;
-    --bs-table-active-color: #fff;
-    --bs-table-hover-bg: #323539;
-    --bs-table-hover-color: #fff;
-    color: #fff;
-    border-color: #373b3e;
-}
-
-
-.table-bordered > :not(caption) > * {
-    border-width: 1px 0;
-}
-
 .table-hover > tbody > tr:hover > * {
     --bs-table-accent-bg: var(--bs-table-hover-bg);
 }
+
+.owner {
+    position: fixed;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, -0%);;
+    margin-bottom: 3rem;
+    color: inherit;
+    font-size: medium;
+}
+.owner-link {
+    text-decoration: none;
+    color: #b90101;
+    font-weight: bold;
+    font-size: large;
+}
+
+.owner-link:hover {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+}
+

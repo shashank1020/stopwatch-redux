@@ -7,8 +7,14 @@ import {Reset} from "./component/Reset";
 import {useSelector} from "react-redux";
 import {Lap} from "./component/Lap";
 import {LapButton} from "./component/LapButton";
+import {useEffect, useState} from "react";
 
 function App() {
+    const [ownerText, setOwnerText] = useState('Shashank')
+    const [changeText, setText] = useState(false)
+    useEffect(() => {
+        changeText ? setOwnerText('Go to my Github'): setOwnerText('Shashank Maurya')
+    },[changeText])
     const {isStart, time, lap} = useSelector(state => state)
     return (
         <div className="App">
@@ -25,6 +31,14 @@ function App() {
             <div className='inner'>{!isStart && time !== 0 && <Resume/>}</div>
             <div className='inner'>{!isStart && time > 0 && <Reset/>}</div>
             {lap.length !== 0 && <Lap/>}
+            <div className="owner">
+                Developed by- <span><a
+                onMouseOver={() => setText(true)}
+                onMouseLeave={() => setText(false)}
+                href='https://github.com/shashank1020/stopwatch-redux'
+                target='_blank' rel="noopener noreferrer"
+                className='owner-link'>{ownerText}</a></span>
+            </div>
         </div>
     );
 }
