@@ -13,7 +13,7 @@ function App() {
     const [ownerText, setOwnerText] = useState('Shashank')
     const [changeText, setText] = useState(false)
     useEffect(() => {
-        changeText ? setOwnerText('Go to my Github'): setOwnerText('Shashank Maurya')
+        changeText ? setTimeout(() => setOwnerText('Go to my Github'), 1000): setOwnerText('Shashank Maurya')
     },[changeText])
     const {isStart, time, lap} = useSelector(state => state)
     return (
