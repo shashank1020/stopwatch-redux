@@ -1,6 +1,6 @@
 import {
     ADD_LAP,
-    AddLap, DELETE_ALL_LAPS,
+    DELETE_ALL_LAPS,
     DELETE_LAP,
     RESET_TIMER,
     RESUME_TIMER,
